@@ -15,7 +15,6 @@ class PlayerMovement extends MonoBehaviour {
 	
 		floorMask = LayerMask.GetMask("Floor");
 		anim = GetComponent(Animator);
-		Debug.Log(anim);
 		playerRigidBody = GetComponent(Rigidbody);
 	}
 	
@@ -52,7 +51,6 @@ class PlayerMovement extends MonoBehaviour {
 	function Animate(h, v) {
 	
 		var walking = h != 0 || v != 0;
-		Debug.Log(walking);
 		anim.SetBool("IsWalking", walking);
 	}
 }
