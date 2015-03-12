@@ -13,7 +13,7 @@ var flashColour : Color = new Color(1f, 0f, 0f, 0.15f);      // The colour the d
 private var anim : Animator;                                              // Reference to the Animator component.
 private var playerAudio : AudioSource;                                    // Reference to the AudioSource component.
 private var playerMovement : PlayerMovement;                              // Reference to the player's movement.
-//private var playerShooting : PlayerShooting;                              // Reference to the PlayerShooting script.
+private var playerShooting : PlayerShooting;                              // Reference to the PlayerShooting script.
 private var isDead : boolean;                                                // Whether the player is dead.
 private var damaged : boolean;                                               // True when the player gets damaged.
 
@@ -24,7 +24,7 @@ function Awake ()
     anim = GetComponent (Animator);
     playerAudio = GetComponent (AudioSource);
     playerMovement = GetComponent (PlayerMovement);
-    //playerShooting = GetComponentInChildren (PlayerShooting);
+    playerShooting = GetComponentInChildren (PlayerShooting);
 
     // Set the initial health of the player.
     currentHealth = startingHealth;
@@ -80,7 +80,7 @@ function Death ()
     isDead = true;
 
     // Turn off any remaining shooting effects.
-    //playerShooting.DisableEffects ();
+    playerShooting.DisableEffects ();
 
     // Tell the animator that the player is dead.
     anim.SetTrigger ("Die");
@@ -91,5 +91,5 @@ function Death ()
 
     // Turn off the movement and shooting scripts.
     playerMovement.enabled = false;
-    //playerShooting.enabled = false;
+    playerShooting.enabled = false;
 }

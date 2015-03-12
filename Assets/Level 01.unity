@@ -598,31 +598,17 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 11405116, guid: 70697cf12d390a447b3af7c65122ba1c, type: 2}
+      propertyPath: healthSlider
+      value: 
+      objectReference: {fileID: 1490887263}
+    - target: {fileID: 11405116, guid: 70697cf12d390a447b3af7c65122ba1c, type: 2}
+      propertyPath: damageImage
+      value: 
+      objectReference: {fileID: 344092002}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 70697cf12d390a447b3af7c65122ba1c, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &888645012
-GameObject:
-  m_PrefabParentObject: {fileID: 147354, guid: 70697cf12d390a447b3af7c65122ba1c, type: 2}
-  m_PrefabInternal: {fileID: 888645011}
---- !u!114 &888645013
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 888645012}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd346f298e5e2a0459a672865150f860, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startingHealth: 100
-  currentHealth: 0
-  healthSlider: {fileID: 1490887263}
-  damageImage: {fileID: 344092002}
-  deathClip: {fileID: 8300000, guid: d36a393bca4582043982db9089e1694f, type: 3}
-  flashSpeed: 5
-  flashColour: {r: 1, g: 0, b: 0, a: .100000001}
 --- !u!4 &888645017
 Transform:
   m_PrefabParentObject: {fileID: 425896, guid: 70697cf12d390a447b3af7c65122ba1c, type: 2}
@@ -1006,6 +992,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeBetweenAttacks: .5
   attackDamage: 10
+--- !u!114 &1487349439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1487349431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c6ea87893de08a4d9c744e53271be40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 100
+  currentHealth: 0
+  sinkSpeed: 2.5
+  scoreValue: 10
+  deathClip: {fileID: 8300000, guid: 1d3bfb9269f136947bf8ac164cace1ff, type: 3}
 --- !u!1 &1490887261
 GameObject:
   m_ObjectHideFlags: 0
