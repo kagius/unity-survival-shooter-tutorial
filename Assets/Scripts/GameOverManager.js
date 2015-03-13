@@ -30,7 +30,7 @@ function Update ()
         if(restartTimer >= restartDelay)
         {
             // .. then reload the currently loaded level.
-            Application.LoadLevel(Application.loadedLevel);
+            Application.LoadLevel("Level 01");
         }
     }
 }
