@@ -16,7 +16,7 @@ function Start ()
 function Spawn ()
 {
     // If the player has no health left...
-    if(playerHealth.currentHealth <= 0f)
+    if(!playerHealth || playerHealth.currentHealth <= 0f)
     {
         // ... exit the function.
         return;
